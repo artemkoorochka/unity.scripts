@@ -9,7 +9,8 @@ public class scrpt : MonoBehaviour
 
     private void Start()
     {
-        Instantiate(objects[2], objects[2].transform.position, objects[2].transform.rotation);
+        int rand = Random.Range(0, objects.Length);
+        Instantiate(objects[rand], objects[rand].transform.position, Quaternion.identity);
     }
 
 }
