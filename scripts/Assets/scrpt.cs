@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class scrpt : MonoBehaviour
 {
-
+    
+    public GameObject obj;
     private Light myLight;
 
     private void Start()
@@ -18,6 +19,21 @@ public class scrpt : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             myLight.enabled = !myLight.enabled;
+        }
+
+        if(Input.GetKeyUp(KeyCode.A))
+        {
+            obj.SetActive(false);
+        }
+
+        if(Input.GetKeyUp(KeyCode.S))
+        {
+            obj.SetActive(true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Delete))
+        {
+            Destroy(obj);
         }
     }
 }
