@@ -7,11 +7,18 @@ public class scrpt : MonoBehaviour
     
     public GameObject obj;
     private Light myLight;
+    private int numEnimies = 10;
 
     private void Start()
     {
         // При старте присваиваем нашей переменной обект с юнити Directional Light
         myLight = GetComponent<Light>();
+
+        // cicle
+        for (int i = 0; i < numEnimies; i++)
+        {
+            Debug.Log("Create " + i + " enimis");
+        }
     }
 
     private void Update()
@@ -35,5 +42,20 @@ public class scrpt : MonoBehaviour
         {
             Destroy(obj);
         }
+
+        // RGB color
+        if(Input.GetKeyUp(KeyCode.R))
+        {
+            obj.GetComponent<Renderer>().material.color = Color.red;
+        }
+        if(Input.GetKeyUp(KeyCode.G))
+        {
+            obj.GetComponent<Renderer>().material.color = Color.green;
+        }
+        if(Input.GetKeyUp(KeyCode.B))
+        {
+            obj.GetComponent<Renderer>().material.color = Color.blue;
+        }
+
     }
 }
