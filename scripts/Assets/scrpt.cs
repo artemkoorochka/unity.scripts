@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class scrpt : MonoBehaviour
 {
-    void FixedUpdate()
+    [SerializeField]
+    private float score = 24.24f;
+
+    private void Start()
     {
-        Debug.Log("Fixitupdate time: " + Time.deltaTime);
+        showScore();
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+    void showScore()
     {
-        Debug.Log("Update time: " + Time.deltaTime);
+        print("Score: " + score);
     }
 }
