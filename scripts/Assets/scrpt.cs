@@ -4,20 +4,14 @@ using UnityEngine;
 
 public class scrpt : MonoBehaviour
 {
-    private void Awake()
+    void FixedUpdate()
     {
-        print("Awake work before Start");
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        print("Hi");
+        Debug.Log("Fixitupdate time: " + Time.deltaTime);
     }
 
     // Update is called once per frame
     void Update()
     {
-        print("Game Upadate");
+        Debug.Log("Update time: " + Time.deltaTime);
     }
 }
