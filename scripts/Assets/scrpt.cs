@@ -12,4 +12,12 @@ public class scrpt : MonoBehaviour
         // При старте присваиваем нашей переменной обект с юнити Directional Light
         myLight = GetComponent<Light>();
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            myLight.enabled = !myLight.enabled;
+        }
+    }
 }
