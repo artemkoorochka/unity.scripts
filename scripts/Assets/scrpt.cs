@@ -9,7 +9,7 @@ public class scrpt : MonoBehaviour
 
     private void Start()
     {
-        Instantiate(objects[2], objects[2].transform.position, Quaternion.identity);
+        Instantiate(objects[2], objects[2].transform.position, objects[2].transform.rotation);
     }
 
 }
