@@ -9,6 +9,7 @@ public class scrpt : MonoBehaviour
 
     private void Start()
     {
+        // При старте присваиваем нашей переменной обект с юнити Directional Light
         myLight = GetComponent<Light>();
     }
 }
