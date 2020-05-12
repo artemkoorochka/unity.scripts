@@ -9,7 +9,7 @@ public class scrpt : MonoBehaviour
 
     private void Start()
     {
-        Instantiate(objects[2], Vector3(20, 30, 40));
+        Instantiate(objects[2], objects[2].transform.position, Quaternion.identity);
     }
 
 }
