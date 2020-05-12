@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class scrpt : MonoBehaviour
 {
-    [SerializeField]
-    private float score = 24.24f;
+
+    private Light myLight;
 
     private void Start()
     {
-        showScore();
-    }
-
-
-
-    void showScore()
-    {
-        print("Score: " + score);
+        myLight = GetComponent<Light>();
     }
 }
