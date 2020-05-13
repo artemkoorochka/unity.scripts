@@ -5,14 +5,21 @@ using UnityEngine;
 public class scrpt : MonoBehaviour
 {
     
-    public GameObject[] objects;
-    private GameObject instObject;
+    public GameObject obj;
 
-    private void Start()
+    private void Update()
     {
-        int rand = Random.Range(0, objects.Length - 1);
-        instObject = Instantiate(objects[rand], objects[rand].transform.position, Quaternion.identity) as GameObject;
-        instObject.transform.localScale = new Vector3(0.24f, 0.24f, 0.24f);
+        if (Input.GetKey(KeyCode.F))
+        {
+            StartCoroutine(instObj());
+        }
     }
+
+    IEnumerator instObj () {
+        yield return new WaitForSeconds(1.5f);
+        Instantiate(obj, obj.transform.position, Quaternion.identity);
+    }
+
+
 
 }
