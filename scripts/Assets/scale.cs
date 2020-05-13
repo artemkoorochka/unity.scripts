@@ -9,9 +9,8 @@ public class scale : MonoBehaviour
         transform.localScale = new Vector3(transform.localScale.x / 2, transform.localScale.y / 2, transform.localScale.z / 2);
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         print(collision.gameObject.name);
     }
-
 }
